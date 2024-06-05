@@ -1,9 +1,9 @@
-
+'''mermaid
 sequenceDiagram
     participant browser
     participant server
 
-    Note right of browser: A new note is entered and the save button is clicked
+    Note over browser,server: A new note is entered and the save button is clicked
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
@@ -33,4 +33,4 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-
+'''
