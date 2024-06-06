@@ -33,7 +33,7 @@
         Note right of browser: The event handler creates a new note, adds it to the notes list, 
         Note right of browser: The event handler rerenders the note list on the page, sends the new note to the server
 
-        browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa with **content-type: application/json**
+        browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa with content-type: application/json
         Note over server: The server does not REDIRECT.
 
         activate server
