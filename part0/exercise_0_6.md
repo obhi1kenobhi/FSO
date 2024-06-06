@@ -27,15 +27,17 @@
 
         Note right of browser: The browser executes the callback function that renders the notes
 
-        Note over browser,server: A new note is created in the single-page app
+        Note right of browser: The event handler starts listening for the submit action of the "Save" button. 
+        Note right of browser: A new note is created in the single-page app and "Save" button is clicked
+        Note right of browser: The event handler first calls the prevent default function, which prevents the default submit action
+        Note right of browser: Event handler creates a new note, adds it to the notes list, 
+        Note right of browser: Event handler rerenders the note list on the page, sends the new note to the server
 
-        browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
-        Note over server: The server pushes the note to data.json
+        browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa with **content-type: application/json**
+        Note over server: The server does not REDIRECT.
+
         activate server
         server->>browser: Returns Status 201 Created
         deactivate server
-        browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
-        activate server
-        server->>browser: 
-        deactivate server
+       
 ```
