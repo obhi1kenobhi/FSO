@@ -29,7 +29,11 @@
 
         Note over browser,server: A new note is created in the single-page app
 
-        browser->>server: post https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+        browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+        Note over server: The server pushes the note to data.json
+        activate server
+        server->>browser: Returns Status 201 Created
+        deactivate server
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
         activate server
         server->>browser: 
