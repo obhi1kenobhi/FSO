@@ -34,7 +34,7 @@
         Note right of browser: The event handler rerenders the note list on the page, sends the new note to the server
 
         browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa with content-type: application/json
-        Note over server: The server does not REDIRECT.
+        Note left of server: The server does not REDIRECT.
 
         activate server
         server->>browser: Returns Status 201 Created
